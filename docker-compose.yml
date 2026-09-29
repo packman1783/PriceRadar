@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: priceradar-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: priceradar
+      POSTGRES_USER: priceradar
+      POSTGRES_PASSWORD: priceradar
+    ports:
+      - "5432:5432"
+    volumes:
+      - priceradar-pgdata:/var/lib/postgresql/data
+
+volumes:
+  priceradar-pgdata:
