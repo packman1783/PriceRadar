@@ -1,4 +1,4 @@
-package org.example.priceradar.dto;
+package org.example.priceradar.web.dto;
 
 import jakarta.validation.constraints.NotEmpty;
 
